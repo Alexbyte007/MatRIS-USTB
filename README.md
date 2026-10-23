@@ -1,6 +1,17 @@
-# MatRIS
+# MatRIS-USTB
 
-This repository contains the official PyTorch implementation of **MatRIS** (a foundation model for **Mat**erials **R**epresentation and **I**nteraction **S**imulation). Please note that the current version is V0.9
+本仓库用于 MatRIS 推理优化，**main 分支为基线源码**。
+
+MatRIS（Materials Representation and Interaction Simulation）是面向材料模拟的预训练机器学习原子间势，可根据原子结构预测能量、力和应力。本仓库源码源自 [HPC-AI-Team/MatRIS](https://github.com/HPC-AI-Team/MatRIS)，保留原有许可证与署名。
+
+优化目标是在保持模型预测结果一致的前提下，加速完整推理流程、降低显存占用，并支持更大的原子体系。设备使用支持所用 CUDA/PyTorch 环境的 NVIDIA GPU，不限定型号或显存容量；优化前后请在同一设备、相同输入下比较。
+
+```bash
+git clone --branch main https://github.com/Alexbyte007/MatRIS-USTB.git
+cd MatRIS-USTB
+```
+
+下文为模型依赖、预训练权重和调用示例。
 
 ### Requirements
 
